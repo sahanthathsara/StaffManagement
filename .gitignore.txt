@@ -1,0 +1,18 @@
+# .NET build folders
+bin/
+obj/
+.vs/
+
+# Windows system files
+Thumbs.db
+Desktop.ini
+
+# Logs
+*.log
+
+# Environment config
+appsettings.Development.json
+appsettings.Production.json
+
+# React (later if frontend is in same repo)
+node_modules/
