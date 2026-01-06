@@ -17,6 +17,7 @@ namespace StaffManagement.Controllers
         {
             var tasks = _context.CookTasks.Where(t => t.AssignedCookId == cookId).ToList();
             return Ok(tasks);
+            //jop
         }
     }
 }
