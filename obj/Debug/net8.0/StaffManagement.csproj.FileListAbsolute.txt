@@ -139,3 +139,4 @@ C:\Users\Sahan\source\repos\StaffManagement\StaffManagement\obj\Debug\net8.0\ref
 C:\Users\Sahan\source\repos\StaffManagement\StaffManagement\obj\Debug\net8.0\StaffManagement.pdb
 C:\Users\Sahan\source\repos\StaffManagement\StaffManagement\obj\Debug\net8.0\StaffManagement.genruntimeconfig.cache
 C:\Users\Sahan\source\repos\StaffManagement\StaffManagement\obj\Debug\net8.0\ref\StaffManagement.dll
+C:\Users\Sahan\source\repos\StaffManagement\StaffManagement\obj\Debug\net8.0\StaffManagement.sourcelink.json
