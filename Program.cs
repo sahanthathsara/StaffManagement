@@ -37,11 +37,25 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
+// Add CORS (allow React frontend)
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(policy =>
+    {
+        policy.WithOrigins("http://localhost:5173") // Vite frontend URL
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
+
 // Add controllers & Swagger
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+// Authorization
 builder.Services.AddAuthorization();
+
 
 // =======================
 // 2️⃣ Build the app
@@ -59,12 +73,15 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-// Add Authentication & Authorization middleware
+// Enable CORS before authentication
+app.UseCors();
+
 app.UseAuthentication();
 app.UseAuthorization();
 
 // Map Controllers
 app.MapControllers();
+
 
 // =======================
 // 4️⃣ Run the app
