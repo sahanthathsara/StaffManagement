@@ -47,7 +47,7 @@ namespace StaffManagement.Controllers
 
             return Ok("User registered successfully");
         }
-        // LOGIN
+        // LOGIN access changes
         [HttpPost("login")]
         public async Task<IActionResult> Login(LoginDto dto)
         {
