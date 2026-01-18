@@ -27,7 +27,7 @@ namespace StaffManagement.Controllers
         }
 
 
-        // SIGNUP
+        //Sighup changes
         [HttpPost("register")]
         public async Task<IActionResult> Register(RegisterDto dto)
         {
