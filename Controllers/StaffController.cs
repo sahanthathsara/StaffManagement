@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using StaffManagement.Data;
 using StaffManagement.DTO;
+using StaffManagement.Models;
 
 namespace StaffManagement.Controllers
 {
@@ -18,11 +19,13 @@ namespace StaffManagement.Controllers
         }
 
         // Only managers can access this endpoint
-        [Authorize(Roles = "Manager")]
+        [Authorize(Roles = "Manager,HR")]
         [HttpGet("users")]
         public async Task<IActionResult> GetAllUsers()
         {
-            var users = await _context.Users.Include(u => u.Role).ToListAsync();
+            var users = await _context.Users
+                .Include(u => u.Role)
+                .ToListAsync();
 
             var result = users.Select(u => new UserListDto
             {
@@ -34,6 +37,26 @@ namespace StaffManagement.Controllers
 
             return Ok(result);
         }
+
+        [Authorize(Roles = "Manager")]
+        [HttpPost]
+        public async Task<IActionResult> AddStaff(CreateUserDto dto)
+        {
+            var user = new User
+            {
+                Name = dto.Name,
+                Email = dto.Email,
+                PasswordHash = BCrypt.Net.BCrypt.HashPassword(dto.Password),
+                RoleId = dto.RoleId
+            };
+
+            _context.Users.Add(user);
+            await _context.SaveChangesAsync();
+
+            return Ok(new { message = "Staff added successfully" });
+        }
+
+
     }
 }
 
