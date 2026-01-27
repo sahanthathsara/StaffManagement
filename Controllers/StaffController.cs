@@ -18,7 +18,7 @@ namespace StaffManagement.Controllers
             _context = context;
         }
 
-        // Only managers can access this endpoint
+        // Only managers and HR can access this endpoint
         [Authorize(Roles = "Manager,HR")]
         [HttpGet("users")]
         public async Task<IActionResult> GetAllUsers()
