@@ -19,7 +19,7 @@ namespace StaffManagement.Controllers
         }
 
         // Only managers and HR can access this endpoint
-        [Authorize(Roles = "Manager,HR")]
+        [Authorize(Roles = "Manager")]
         [HttpGet("users")]
         public async Task<IActionResult> GetAllUsers()
         {
