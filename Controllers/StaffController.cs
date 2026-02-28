@@ -47,7 +47,7 @@ namespace StaffManagement.Controllers
                 Name = dto.Name,
                 Email = dto.Email,
                 PasswordHash = BCrypt.Net.BCrypt.HashPassword(dto.Password),
-                RoleId = dto.RoleId
+                RoleId = dto.RoleId 
             };
 
             _context.Users.Add(user);
