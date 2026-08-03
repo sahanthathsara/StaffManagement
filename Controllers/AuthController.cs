@@ -59,7 +59,7 @@ namespace StaffManagement.Controllers
                 return Unauthorized("Invalid email");
 
             if (!BCrypt.Net.BCrypt.Verify(dto.Password, user.PasswordHash))
-                return Unauthorized("Invalid password");
+                return Unauthorized("Invalid entered password");
 
             var token = GenerateJwtToken(user);
 

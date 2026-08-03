@@ -140,3 +140,4 @@ C:\Users\Sahan\source\repos\StaffManagement\StaffManagement\obj\Debug\net8.0\Sta
 C:\Users\Sahan\source\repos\StaffManagement\StaffManagement\obj\Debug\net8.0\StaffManagement.genruntimeconfig.cache
 C:\Users\Sahan\source\repos\StaffManagement\StaffManagement\obj\Debug\net8.0\ref\StaffManagement.dll
 C:\Users\Sahan\source\repos\StaffManagement\StaffManagement\obj\Debug\net8.0\StaffManagement.sourcelink.json
+C:\Users\Sahan\source\repos\StaffManagement\StaffManagement\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

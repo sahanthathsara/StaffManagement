@@ -64,6 +64,38 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "StaffManagement.Controllers.ManagerController",
+    "Method": "GetCookTasks",
+    "RelativePath": "api/cook/tasks",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cookId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StaffManagement.Controllers.StaffController",
+    "Method": "AddStaff",
+    "RelativePath": "api/staff",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "StaffManagement.DTO.CreateUserDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "StaffManagement.Controllers.StaffController",
     "Method": "GetAllUsers",
     "RelativePath": "api/staff/users",
